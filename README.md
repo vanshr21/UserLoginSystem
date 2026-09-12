@@ -40,11 +40,15 @@ src/
     │       └── AppConfig.java
     │
     └── webapp/
-        ├── login.html
-        ├── register.html
-        ├── style/
-        └── WEB-INF/
-            └── dashboard.html
+    │    ├── login.html
+    │    ├── register.htm
+    │    ├── user-created.html
+    │    ├── style/
+    │    └── WEB-INF/
+    │        └── login-sucess.html
+    │
+    └── sql-structure/
+         └──  structure.sql
 ```
 
 ## Application Flow
@@ -85,6 +89,8 @@ The database connection uses environment variables:
 DB_USERNAME
 DB_PASSWORD
 ```
+
+<i>Note : See the sql-structure folder</i>
 
 ## Running the Project
 
