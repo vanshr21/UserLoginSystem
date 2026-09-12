@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register User</title>
+
+    <link rel="stylesheet" href="style/register.css"/>
+</head>
+
+<body>
+
+<div class="register-box">
+
+    <h2>Register User</h2>
+
+    <form action= "register" method="post">
+
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" name="firstName" required>
+
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" name="lastName" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Password</label>
+        <div class="password-container">
+            <input type="password" id="password" name="password" required>
+            <button type="button" onclick="togglePassword()">Show</button>
+        </div>
+
+        <label for="confirmPassword">Confirm Password</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+        <div class="buttons">
+            <button type="submit">Submit</button>
+        </div>
+
+        <p class="login-link">
+            Already have an account?
+            <a href="login.html">Login</a>
+        </p>
+
+    </form>
+
+</div>
+
+<script>
+    function togglePassword() {
+        const password = document.getElementById("password");
+        const button = event.target;
+
+        if (password.type === "password") {
+            password.type = "text";
+            button.textContent = "Hide";
+        } else {
+            password.type = "password";
+            button.textContent = "Show";
+        }
+    }
+
+    window.onload = function () {
+        document.querySelector("form").reset();
+    };
+
+</script>
+</body>
+</html>
